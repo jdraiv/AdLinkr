@@ -2,7 +2,7 @@ Arguments:
   /usr/bin/node /usr/share/yarn/bin/yarn.js test
 
 PATH: 
-  /home/jody/Projects/AdLinkr/node_modules/.bin:/home/jody/Projects/AdLinkr/node_modules/.bin:/home/jody/.config/yarn/link/node_modules/.bin:/home/jody/Projects/AdLinkr/node_modules/.bin:/home/jody/.config/yarn/link/node_modules/.bin:/home/jody/.yarn/bin:/usr/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/lib/node_modules/npm/bin/node-gyp-bin:/usr/bin/node_modules/npm/bin/node-gyp-bin:/home/jody/.npm-modules/bin:/home/jody/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/rvm/bin
+  /home/jody/Projects/AdLinkr/node_modules/.bin:/home/jody/Projects/AdLinkr/node_modules/.bin:/home/jody/.config/yarn/link/node_modules/.bin:/home/jody/Projects/AdLinkr/node_modules/.bin:/home/jody/.config/yarn/link/node_modules/.bin:/home/jody/.yarn/bin:/usr/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/lib/node_modules/npm/bin/node-gyp-bin:/usr/bin/node_modules/npm/bin/node-gyp-bin:/home/jody/.npm-modules/bin:/home/jody/.cargo/bin:/home/jody/.npm-modules/bin:/home/jody/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/rvm/bin
 
 Yarn version: 
   1.6.0
@@ -57,7 +57,7 @@ npm manifest:
       "supertest": "^3.0.0"
     },
     "dependencies": {
-      "bcrypt": "^2.0.1",
+      "bcryptjs": "^2.4.3",
       "body-parser": "^1.18.2",
       "express": "^4.16.3",
       "express-validator": "^5.1.2",
@@ -207,6 +207,10 @@ Lockfile:
     dependencies:
       nan "2.10.0"
       node-pre-gyp "0.9.1"
+  
+  bcryptjs@^2.4.3:
+    version "2.4.3"
+    resolved "https://registry.yarnpkg.com/bcryptjs/-/bcryptjs-2.4.3.tgz#9ab5627b93e60621ff7cdac5da9733027df1d0cb"
   
   bluebird@3.5.0:
     version "3.5.0"

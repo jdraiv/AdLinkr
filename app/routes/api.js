@@ -37,10 +37,23 @@ router.post('/Campaigns/add', (req, res) => {
         res.json(data);
         return;
     });
+});
 
-    // res.json({
-    //     'error': 'Unknown Error Occured: Please contact technical support.',
-    // });
+router.get('/Campaigns/Delete/:id*?', (req, res) => {
+    if (!req.params.id) {
+        return res.json({
+            'error': 'Please ensure campaign ID is provided.',
+        });
+    }
+
+    Campaign.findByIdAndRemove(req.params.id, (err, data) => {
+        if (err) {
+            return res.json({'error': err});
+        }
+
+        console.log(data);
+        res.json({'success': `Campaign "${data.name}" deleted`});
+    });
 });
 
 router.get('/*', (req, res) => {
