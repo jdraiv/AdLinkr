@@ -10,7 +10,11 @@
 
 const request = require('supertest');
 
-const app = require('../../app/server');
+const {app, server} = require('../../app/server');
+
+after(() => {
+    server.close();
+});
 
 describe('Routes: API', () => {
     it('Should serve JSON for valid API routes', (done) => {

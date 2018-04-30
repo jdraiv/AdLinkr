@@ -8,8 +8,14 @@
  * Website: https://jodylecompte.com
  */
 
-const User = require('../../app/models/UserGroup');
+const mongoose = require('mongoose');
 let expect = require('chai').expect;
+
+const User = require('../../app/models/UserGroup');
+
+after(() => {
+    mongoose.connection.close();
+});
 
 describe('Models: UserGroup', function() {
     it('should be invalid if name is empty', () => {

@@ -18,7 +18,7 @@ const adminRoutes = require('./routes/admin');
 
 require('./db');
 
-const app = module.exports = express();
+const app = module.exports.app = express();
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
@@ -29,4 +29,7 @@ app.use('/api', apiRoutes);
 app.use('/admin', adminRoutes);
 app.use('/', coreRoutes);
 
-app.listen(port, () => console.log(`AdLinkr server initalized.`));
+const server = app.listen(port, () =>
+    console.log(`AdLinkr server initalized.`));
+
+module.exports.server = server;

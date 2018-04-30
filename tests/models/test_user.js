@@ -10,11 +10,8 @@
 
 const User = require('../../app/models/User');
 let expect = require('chai').expect;
-// const sinon = require('sinon');
-// const mongoose = require('mongoose');
 
 const seed = require('../seeds/user.seed');
-// const config = require('../../app/config/config');
 require('../../app/db');
 
 describe('Models: User', function() {

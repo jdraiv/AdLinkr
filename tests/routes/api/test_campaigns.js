@@ -10,9 +10,15 @@
 
 const request = require('supertest');
 const expect = require('chai').expect;
+const mongoose = require('mongoose');
 
 const Campaign = require('../../../app/models/Campaign');
-const app = require('../../../app/server');
+const {app, server} = require('../../../app/server');
+
+after(() => {
+    server.close();
+    mongoose.connection.close();
+});
 
 describe('POST Campaigns/Add', () => {
     it('Should add a new campaign with valid input', (done) => {

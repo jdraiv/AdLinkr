@@ -10,9 +10,15 @@
 
 const request = require('supertest');
 const expect = require('chai').expect;
+const mongoose = require('mongoose');
 
 const User = require('../../../app/models/User');
-const app = require('../../../app/server');
+const {app, server} = require('../../../app/server');
+
+after(() => {
+    server.close();
+    mongoose.connection.close();
+});
 
 describe('POST auth/register', () => {
     beforeEach((done) => {
