@@ -13,6 +13,10 @@ const router = new express.Router();
 
 const Link = require('../models/Link');
 
+router.get('/', (req, res) => {
+    res.sendStatus(200);
+});
+
 router.get('/:shortCode', (req, res) => {
     const shortCode = req.params.shortCode;
 

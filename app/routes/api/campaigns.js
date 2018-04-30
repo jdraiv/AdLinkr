@@ -51,7 +51,6 @@ router.get('/Delete/:id*?', (req, res) => {
             return res.json({'error': err});
         }
 
-        console.log(data);
         res.json({'success': `Campaign "${data.name}" deleted`});
     });
 });

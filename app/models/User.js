@@ -62,7 +62,9 @@ userSchema.statics.createUser = function(userData, callback) {
         const hash = bcrypt.hashSync(newUser.password, salt);
         
         newUser.password = hash;
-        newUser.save().then((err, data) => callback(err, data));
+        newUser.save().then((data) => {
+            callback(null, data);
+        });
     });
 };
 

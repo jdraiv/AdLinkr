@@ -12,8 +12,10 @@ const express = require('express');
 const router = new express.Router();
 
 const CampaignRoutes = require('../routes/api/campaigns');
+const AuthRoutes = require('../routes/api/auth');
 
 router.use('/campaigns', CampaignRoutes);
+router.use('/auth', AuthRoutes);
 
 router.get('/*', (req, res) => {
     res.json({'error': 'Invalid endpoint.'});

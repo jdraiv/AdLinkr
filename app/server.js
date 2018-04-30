@@ -10,6 +10,7 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
+const expressValidator = require('express-validator');
 
 const coreRoutes = require('./routes/core');
 const apiRoutes = require('./routes/api');
@@ -21,7 +22,7 @@ const app = module.exports = express();
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
-
+app.use(expressValidator());
 app.use('/public', express.static('public'));
 
 app.use('/api', apiRoutes);
